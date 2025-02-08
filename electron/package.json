@@ -1,0 +1,35 @@
+{
+  "name": "capacitorjs-fresh-boilerplate",
+  "version": "1.0.0",
+  "description": "An Amazing Capacitor App",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "main": "build/src/index.js",
+  "scripts": {
+    "build": "tsc && electron-rebuild",
+    "electron:start-live": "node ./live-runner.js",
+    "electron:start": "npm run build && electron --inspect=5858 ./",
+    "electron:pack": "npm run build && electron-builder build --dir -c ./electron-builder.config.json",
+    "electron:make": "npm run build && electron-builder build --dir -c ./electron-builder.config.json -p always"
+  },
+  "dependencies": {
+    "@capacitor-community/electron": "^5.0.1",
+    "chokidar": "^4.0.3",
+    "electron-updater": "^6.3.9",
+    "electron-window-state": "^5.0.3",
+    "lodash.debounce": "^4.0.8"
+  },
+  "devDependencies": {
+    "electron": "^34.1.1",
+    "electron-builder": "^25.1.8",
+    "electron-rebuild": "^3.2.9",
+    "typescript": "^5.7.3"
+  },
+  "keywords": [
+    "capacitor",
+    "electron"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "appId": "com.yourdomain.yourapp",
+  "directories": {
+    "buildResources": "resources"
+  },
+  "compression": "normal",
+  "files": ["assets/**/*", "build/**/*", "capacitor.config.*", "app/**/*"],
+  "includeSubNodeModules": true,
+  "asar": true,
+  "linux": {
+    "target": ["AppImage"],
+    "category": "Utility",
+    "maintainer": "Your Name <you@example.com>",
+    "synopsis": "Short description of your app",
+    "description": "Longer description of your app",
+    "icon": "assets/appIcon.png"
+  },
+  "win": {
+    "target": ["nsis"],
+    "icon": "assets/appIcon.ico"
+  },
+  "nsis": {
+    "allowElevation": true,
+    "oneClick": true,
+    "allowToChangeInstallationDirectory": false,
+    "perMachine": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "runAfterFinish": true,
+    "deleteAppDataOnUninstall": true,
+    "installerLanguages": "en_US",
+    "license": "LICENSE"
+  },
+  "mac": {
+    "target": ["dmg"],
+    "category": "your.app.category.type",
+    "icon": "assets/appIcon.icns"
+  }
+}
